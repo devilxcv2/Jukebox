@@ -1,0 +1,34 @@
+# requirements.txt per YouTube Jukebox
+
+# --- Librerie Python Fondamentali ---
+
+# GUI Framework
+PyQt5==5.15.10 # Sostituisci con la tua versione (es. da 'pip freeze | grep PyQt5')
+
+# Binding Python per VLC (NOTA: richiede l'installazione separata della libreria libVLC sul sistema!)
+python-vlc==3.0.20 # Sostituisci con la tua versione (es. da 'pip freeze | grep python-vlc')
+
+# Downloader YouTube/Video e Estrattore Informazioni
+yt-dlp==2024.4.9 # Sostituisci con la tua versione (es. da 'pip freeze | grep yt-dlp')
+
+# Libreria per richieste HTTP (usata per scaricare le copertine)
+requests==2.31.0 # Sostituisci con la tua versione (es. da 'pip freeze | grep requests')
+
+# Libreria per manipolazione immagini (usata per creare la copertina di default - opzionale se default_cover.png esiste già)
+Pillow==10.3.0 # Sostituisci con la tua versione (es. da 'pip freeze | grep Pillow')
+
+
+# --- Note sulle Dipendenze Esterne (NON installabili via pip) ---
+#
+# 1. libVLC: La libreria 'python-vlc' richiede che la libreria principale di VLC (libVLC)
+#    sia installata sul tuo sistema operativo.
+#    - Su Debian/Ubuntu: sudo apt install libvlc-dev libvlccore-dev vlc
+#    - Su Fedora: sudo dnf install vlc-devel vlc
+#    - Su altri OS: consulta la documentazione di VLC.
+#
+# 2. FFmpeg: Necessario per la conversione dei download in formato MP3.
+#    Deve essere installato separatamente e accessibile nel PATH del sistema.
+#    - Su Debian/Ubuntu: sudo apt install ffmpeg
+#    - Su Fedora: sudo dnf install ffmpeg
+#    - Su macOS (con Homebrew): brew install ffmpeg
+#    - Su Windows: Scarica da ffmpeg.org e aggiungi alla variabile d'ambiente PATH.
