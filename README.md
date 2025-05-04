@@ -1,12 +1,8 @@
 # Python YouTube/Local Jukebox 🎵
 
 A simple graphical Jukebox built with Python and PyQt5 that allows searching and playing music from YouTube (using `yt-dlp` and VLC) and importing/managing local audio files.
+![image](https://github.com/user-attachments/assets/4a811036-bb8b-4427-bd82-8fc8fb2614c0)
 
-**(Insert a screenshot of the application here!)**
-![Jukebox Screenshot](screenshot_placeholder.png)
-*(Replace `screenshot_placeholder.png` with your actual image file name)*
-
----
 
 ## ✨ Key Features
 
