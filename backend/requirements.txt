@@ -17,6 +17,8 @@ requests==2.31.0 # Sostituisci con la tua versione (es. da 'pip freeze | grep re
 # Libreria per manipolazione immagini (usata per creare la copertina di default - opzionale se default_cover.png esiste già)
 Pillow==10.3.0 # Sostituisci con la tua versione (es. da 'pip freeze | grep Pillow')
 
+# Web Framework
+Flask==3.0.0
 
 # --- Note sulle Dipendenze Esterne (NON installabili via pip) ---
 #

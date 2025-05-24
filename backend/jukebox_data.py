@@ -9,7 +9,7 @@ import json
 import re
 import shutil
 from pathlib import Path
-from PyQt5.QtWidgets import QApplication, QMessageBox
+# from PyQt5.QtWidgets import QApplication, QMessageBox # GUI elements removed for server compatibility
 
 # Try importing necessary libraries. Provide user feedback if missing.
 try:
@@ -17,9 +17,9 @@ try:
 except ImportError:
     print("FATAL ERROR: La libreria 'yt_dlp' non è installata.")
     print("Per installarla, esegui: pip install yt-dlp")
-    app = QApplication.instance()
-    if app is None: app = QApplication(sys.argv)
-    QMessageBox.critical(None, "Errore Critico", "La libreria 'yt_dlp' non è installata.\nPer installarla, esegui: pip install yt-dlp")
+    # app = QApplication.instance() # GUI
+    # if app is None: app = QApplication(sys.argv) # GUI
+    # QMessageBox.critical(None, "Errore Critico", "La libreria 'yt_dlp' non è installata.\nPer installarla, esegui: pip install yt-dlp") # GUI
     sys.exit(1)
 
 try:
@@ -27,9 +27,9 @@ try:
 except ImportError:
     print("FATAL ERROR: Le librerie 'python-vlc' non sono installate.")
     print("Per installarle, esegui: pip install python-vlc")
-    app = QApplication.instance()
-    if app is None: app = QApplication(sys.argv)
-    QMessageBox.critical(None, "Errore Critico", "Le librerie 'python-vlc' non sono installate.\nPer installarle, esegui: pip install python-vlc")
+    # app = QApplication.instance() # GUI
+    # if app is None: app = QApplication(sys.argv) # GUI
+    # QMessageBox.critical(None, "Errore Critico", "Le librerie 'python-vlc' non sono installate.\nPer installarle, esegui: pip install python-vlc") # GUI
     sys.exit(1)
 
 try:
@@ -44,8 +44,8 @@ try:
     instance_options = ['--no-xlib'] if sys.platform.startswith('linux') else []
     instance_options.append('--quiet')
 
-    app_instance = QApplication.instance()
-    if app_instance is None: app_instance = QApplication(sys.argv) # Ensure QApplication exists
+    # app_instance = QApplication.instance() # GUI
+    # if app_instance is None: app_instance = QApplication(sys.argv) # Ensure QApplication exists # GUI
 
     vlc_instance = vlc.Instance(instance_options)
 
@@ -54,9 +54,9 @@ try:
 except Exception as e:
     print(f"FATAL ERROR: Impossibile inizializzare VLC. Assicurati che libvlc sia installato e accessibile. Dettagli: {e}")
     # Ensure QApplication exists before showing QMessageBox
-    app_instance = QApplication.instance()
-    if app_instance is None: app_instance = QApplication(sys.argv)
-    QMessageBox.critical(None, "Errore VLC critico", f"Impossibile inizializzare VLC. Assicurati che sia installato correttamente. Dettagli: {e}")
+    # app_instance = QApplication.instance() # GUI
+    # if app_instance is None: app_instance = QApplication(sys.argv) # GUI
+    # QMessageBox.critical(None, "Errore VLC critico", f"Impossibile inizializzare VLC. Assicurati che sia installato correttamente. Dettagli: {e}") # GUI
     sys.exit(1)
 
 

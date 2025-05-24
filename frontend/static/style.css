@@ -1,0 +1,174 @@
+/* Custom styles for Jukebox Web App */
+
+/* 1. Stili Globali e Corpo */
+body {
+    background-color: #121212; /* Grigio molto scuro */
+    color: #e0e0e0; /* Testo chiaro */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Font sans-serif moderno */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Assicura che il footer stia in basso */
+}
+
+main.container {
+    flex: 1; /* Fa in modo che il contenuto principale occupi lo spazio disponibile */
+}
+
+/* 2. Header/Navbar */
+header.bg-dark h1 {
+    color: #ffffff; /* Testo bianco per il titolo principale */
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-size: 2.5rem; /* Dimensione maggiore per il titolo */
+}
+
+/* 3. Area Player */
+#player-area {
+    background-color: #1c1c1c; /* Sfondo leggermente più chiaro del body */
+    border-color: #333 !important; /* Bordo più scuro */
+    border-radius: 0.5rem; /* Angoli arrotondati */
+}
+
+#player-area img {
+    border: 2px solid #444;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 0.25rem;
+    max-width: 150px; /* Coerente con HTML */
+    max-height: 150px; /* Coerente con HTML */
+    object-fit: cover; /* Coerente con HTML */
+}
+
+#player-area h4 { /* Titolo Brano */
+    color: #ffffff;
+    font-size: 1.5rem;
+    margin-bottom: 0.25rem;
+}
+
+#player-area p { /* Artista - Album */
+    color: #b0b0b0;
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+}
+
+#player-area .progress {
+    background-color: #333; /* Sfondo della barra di progresso */
+    height: 12px; /* Leggermente più spessa */
+}
+
+#player-area .progress-bar {
+    background-color: #1db954; /* Verde Spotify-like per la progressione */
+}
+
+#player-area .btn {
+    padding: 0.5rem 1rem; /* Più padding per i bottoni */
+    font-size: 1rem;
+    margin: 0 0.3rem; /* Aggiusta i margini laterali */
+}
+
+#player-area .btn-primary {
+    background-color: #1db954;
+    border-color: #1db954;
+}
+#player-area .btn-primary:hover {
+    background-color: #1aa34a;
+    border-color: #1aa34a;
+}
+
+#player-area #volumeControl {
+    accent-color: #1db954; /* Colora il cursore del range input */
+}
+
+/* 4. Area Ricerca */
+#search-area {
+    background-color: #1c1c1c;
+    border-color: #333 !important;
+    border-radius: 0.5rem;
+}
+
+#searchInput {
+    background-color: #2c2c2c;
+    color: #e0e0e0;
+    border-color: #444;
+}
+
+#searchInput::placeholder {
+    color: #888;
+}
+
+#searchInput:focus {
+    background-color: #333;
+    color: #e0e0e0;
+    border-color: #1db954;
+    box-shadow: 0 0 0 0.25rem rgba(29, 185, 84, 0.25); /* Ombra focus verde */
+}
+
+#searchButton {
+    background-color: #333;
+    color: #e0e0e0;
+    border-color: #444;
+}
+
+#searchButton:hover {
+    background-color: #1db954;
+    color: #fff;
+    border-color: #1db954;
+}
+
+/* 5. Area Contenuti Principali (Tabs) */
+.nav-tabs {
+    border-bottom-color: #333; /* Bordo inferiore dei tabs */
+}
+
+.nav-tabs .nav-link {
+    color: #b0b0b0; /* Colore link tab non attivo */
+    background-color: transparent;
+    border-color: transparent transparent #333 transparent; /* Bordo solo in basso per coerenza */
+}
+
+.nav-tabs .nav-link:hover {
+    color: #ffffff;
+    border-color: transparent transparent #555 transparent; /* Bordo hover */
+}
+
+.nav-tabs .nav-link.active {
+    color: #ffffff; /* Colore link tab attivo */
+    background-color: #1c1c1c; /* Sfondo tab attivo */
+    border-color: #333 #333 #1c1c1c; /* Bordi per tab attivo */
+    font-weight: bold;
+}
+
+.tab-content {
+    background-color: #1c1c1c; /* Sfondo per il contenuto dei tab */
+    border-radius: 0 0 0.5rem 0.5rem; /* Arrotonda angoli inferiori */
+    border: 1px solid #333;
+    border-top: none; /* Rimuove il bordo superiore perché gestito dal nav-tabs */
+}
+
+.tab-pane {
+    padding: 1.5rem; /* Padding interno per i tab-pane */
+    min-height: 200px; /* Altezza minima per dare corpo ai tab */
+}
+
+/* 6. Footer */
+footer.bg-light { /* Sovrascrive bg-light se usato nell'HTML */
+    background-color: #1c1c1c !important; /* Sfondo scuro per il footer */
+    color: #888; /* Testo grigio per il footer */
+    padding: 1.5rem 0;
+    border-top: 1px solid #333; /* Bordo superiore per separazione */
+}
+
+/* 7. Generale - Utility */
+.img-fluid { /* Assicura che le immagini siano responsive, se non già coperte da Bootstrap */
+    max-width: 100%;
+    height: auto;
+}
+
+/* Migliora il contrasto per alcuni elementi Bootstrap se necessario */
+.text-muted { /* Per il footer o altri testi secondari */
+    color: #888 !important;
+}
+
+/* Icone Bootstrap se usate con <i> e colore di default */
+i.bi {
+    vertical-align: middle; /* Allinea meglio le icone con il testo */
+}
